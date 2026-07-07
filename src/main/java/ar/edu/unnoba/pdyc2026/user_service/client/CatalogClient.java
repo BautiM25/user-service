@@ -23,6 +23,6 @@ public interface CatalogClient {
     List<EventSummary> getEventsByArtist(@PathVariable("artistId") Long artistId);
     
     // Endpoint de admin para verificar que el artista exista
-    @GetMapping("/admin/artists/{id}")
+    @GetMapping("/artists/{id}")
     ArtistResponse getArtistById(@PathVariable("id") Long id);
 }

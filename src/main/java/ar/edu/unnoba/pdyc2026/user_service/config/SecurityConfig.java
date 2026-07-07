@@ -41,7 +41,7 @@ public class SecurityConfig {
                 .requestMatchers("/admin/**").hasRole("admin")
                 
                 // 3. Endpoints de usuarios finales
-                .requestMatchers("/me/**").hasRole("user")
+                .requestMatchers("/me/**").authenticated()
                 
                 // Cualquier otra cosa, bloqueada por defecto
                 .anyRequest().authenticated()
